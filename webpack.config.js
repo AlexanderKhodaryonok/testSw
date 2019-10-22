@@ -1,14 +1,14 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: './src/index.tsx',
   output: {
-    path: path.join(__dirname, "/build"),
-    filename: "index_bundle.js"
+    path: path.join(__dirname, '/build'),
+    filename: 'index_bundle.js',
   },
   devtool: 'source-map',
   module: {
@@ -22,7 +22,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader',
         },
       },
       {
@@ -34,23 +34,20 @@ module.exports = {
               hmr: process.env.NODE_ENV === 'development',
             },
           },
-          { 
-            loader: "css-modules-typescript-loader"
-          }, 
+          {
+            loader: 'css-modules-typescript-loader',
+          },
           {
             loader: 'css-loader',
             options: {
               modules: true,
               sourceMap: true,
-            }
+            },
           },
-          { loader: 'sass-loader' }
+          { loader: 'sass-loader' },
         ],
       },
-    ]
-  },
-  resolve: {
-    extensions: [".ts", ".tsx", ".js", ".css", ".scss"]
+    ],
   },
   optimization: {
     minimizer: [
@@ -60,7 +57,7 @@ module.exports = {
             comments: false,
           },
         },
-      })
+      }),
     ],
   },
   plugins: [
@@ -69,7 +66,14 @@ module.exports = {
       chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
     }),
     new HtmlWebpackPlugin({
-      template: "./src/index.html"
-    })
-  ]
+      template: './src/index.html',
+    }),
+  ],
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.css', '.scss'],
+    modules: ['node_modules','app'],
+    alias: {
+      src:  "src",
+    }
+  },
 };
