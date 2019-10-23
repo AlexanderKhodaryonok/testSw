@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --hot",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "eslint **/*.tsx --ignore-pattern node_modules/ --fix"
   },
   "author": "alexander",
@@ -15,10 +15,15 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
     "@typescript-eslint/eslint-plugin": "^2.5.0",
     "@typescript-eslint/parser": "^2.5.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.3",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",
@@ -41,10 +46,12 @@
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
+    "@types/jest": "^24.0.19",
     "@types/react": "^16.9.9",
     "@types/react-dom": "^16.9.2",
     "css-modules-typescript-loader": "^3.0.1",
     "eslint-import-resolver-webpack": "^0.11.1",
+    "jest": "^24.9.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "source-map-loader": "^0.2.4"
