@@ -76,4 +76,10 @@ module.exports = {
       src:  "src",
     }
   },
+  devServer: {
+    contentBase: path.join(__dirname, 'build'),
+    compress: true,
+    historyApiFallback: true,
+    port: 9000  
+  }
 };

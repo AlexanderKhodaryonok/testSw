@@ -1,10 +1,11 @@
 import React from 'react';
-import s from './App.module.scss';
+import { BrowserRouter } from 'react-router-dom';
+import Routs from '../routs/Routs';
 
 const App: React.FC = () => (
-  <div className={s.head}>
-    <h1>My React App!</h1>
-  </div>
+  <BrowserRouter>
+    <Routs />
+  </BrowserRouter>
 );
 
 export default App;
