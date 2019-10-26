@@ -48,7 +48,11 @@
     "eslint-import-resolver-webpack": "^0.11.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
+    "redux": "^4.0.4",
+    "redux-saga": "^1.1.1",
+    "reselect": "^4.0.0",
     "source-map-loader": "^0.2.4"
   }
 }
