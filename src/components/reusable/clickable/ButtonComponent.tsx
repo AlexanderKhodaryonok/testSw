@@ -8,9 +8,9 @@ interface IButtonComponent {
 const ButtonComponent: React.FC<IButtonComponent> = (props: IButtonComponent) => {
   const { text } = props;
   return (
-    <div>
+    <>
       <button type="button">{text}</button>
-    </div>
+    </>
   );
 };
 

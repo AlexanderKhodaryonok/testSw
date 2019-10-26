@@ -10,9 +10,9 @@ interface ILinkComponent {
 const LinkComponent: React.FC<ILinkComponent> = (props: ILinkComponent) => {
   const { name, path } = props;
   return (
-    <div>
+    <>
       <Link to={`/${path}`}>{name}</Link>
-    </div>
+    </>
   );
 };
 
