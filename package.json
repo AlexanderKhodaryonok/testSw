@@ -39,17 +39,22 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7",
-    "webpack-dev-server": "^3.8.0"
-  },
-  "dependencies": {
+    "webpack-dev-server": "^3.8.0",
     "@types/react": "^16.9.9",
     "@types/react-dom": "^16.9.2",
-    "@types/react-router-dom": "^5.1.0",
+    "@types/react-redux": "^7.1.5",
+    "@types/react-router-dom": "^5.1.0"
+  },
+  "dependencies": {
     "css-modules-typescript-loader": "^3.0.1",
     "eslint-import-resolver-webpack": "^0.11.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
+    "redux": "^4.0.4",
+    "redux-saga": "^1.1.1",
+    "reselect": "^4.0.0",
     "source-map-loader": "^0.2.4"
   },
   "husky": {
