@@ -27,6 +27,7 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.0.7",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "postcss-loader": "^3.0.0",
@@ -50,5 +51,10 @@
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.1.2",
     "source-map-loader": "^0.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
